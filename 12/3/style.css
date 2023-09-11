@@ -1,0 +1,26 @@
+#parent-box {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: crimson;
+    width: 50vw;
+    height: 70vh;
+    position: relative;
+}
+
+#parent-box::after {
+    /* before and after are pseudo elements (that are children of the parent )*/
+    background-color: purple;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* pseudo elements don't work without this attr*/
+    content: "";
+    width: 50%;
+    height: 100%;
+
+
+}
+
+#parent-box:hover::after {
+    background-color: springgreen;
+}
