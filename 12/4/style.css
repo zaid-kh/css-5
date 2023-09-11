@@ -1,0 +1,9 @@
+#parent-box {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: crimson;
+    width: 50vw;
+    height: 70vh;
+}
+
+.child {}
