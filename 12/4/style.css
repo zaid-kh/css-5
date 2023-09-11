@@ -1,9 +1,53 @@
+* {
+    color: white;
+}
+
 #parent-box {
     margin-right: auto;
     margin-left: auto;
-    background-color: crimson;
+    background-color: black;
     width: 50vw;
     height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.child {}
+#child-box {
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    border-style: solid;
+    border-color: red;
+    border-width: 0.5vw;
+}
+
+#child-box::before {
+    /* covers horizontal border */
+    content: "";
+    background-color: black;
+    width: 110%;
+    height: 80%;
+    position: absolute;
+    z-index: 1;
+}
+
+#child-box::after {
+    /* covers vertical border */
+    content: "";
+    background-color: black;
+    width: 80%;
+    height: 110%;
+    position: absolute;
+    z-index: 1;
+}
+
+#child-box h2 {
+    z-index: 100;
+}
